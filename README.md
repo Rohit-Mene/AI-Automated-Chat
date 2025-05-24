@@ -14,6 +14,7 @@ An intelligent Telegram bot that automates chat replies by analyzing conversatio
 - Node.js (v14 or higher)
 - npm (Node Package Manager)
 - Telegram Bot Token (obtained from [@BotFather](https://t.me/botfather))
+- OpenAI API Key (for AI processing)
 
 ## Installation
 
@@ -28,9 +29,18 @@ cd ai-chat-agent-mcp
 npm install
 ```
 
-3. Create a `.env` file in the root directory and add your Telegram bot token:
+3. Create a `.env` file in the root directory and add the following environment variables:
 ```
+# Telegram Configuration
 TELEGRAM_BOT_TOKEN=your_bot_token_here
+PUBLIC_URL=your_public_url_here  # e.g., https://your-domain.com
+
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Server Configuration
+PORT=3000  # Optional, defaults to 3000
+MCP_URL=http://localhost:3000/mcp  # Optional, defaults to http://localhost:3000/mcp
 ```
 
 ## Project Structure
